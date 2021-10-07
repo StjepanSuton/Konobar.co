@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import AllDrinksList from "./components/Meals/AllDrinksList";
+import Header from "./components/UI/Header";
+import { Box } from "@mui/material";
+import ShowModal from "./components/Cart/ShowModal";
+import { createTheme, ThemeProvider } from "@material-ui/core";
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#eb4034",
+    },
+  },
+  typography: {
+    fontFamily: "Glory",
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div style={{ width: "100%" }}>
+      <ThemeProvider theme={theme}>
+        <Header></Header>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            p: 1,
+            m: 1,
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <AllDrinksList />
+        </Box>
+        <ShowModal></ShowModal>
+      </ThemeProvider>
     </div>
   );
 }
