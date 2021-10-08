@@ -1,0 +1,281 @@
+{
+  "Drinks" : {
+    "g1" : {
+      "drinks" : {
+        "p10" : {
+          "id" : "g1p10",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 7,
+          "title" : "Kava",
+          "titleEng" : "Coffee"
+        },
+        "p11" : {
+          "id" : "g1p11",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 8,
+          "title" : "Kava s mlijekom",
+          "titleEng" : "Coffee with milk"
+        },
+        "p12" : {
+          "id" : "g1p12",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 9,
+          "title" : "Kava sa šlagom",
+          "titleEng" : "Coffee with cream"
+        },
+        "p13" : {
+          "id" : "g1p13",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 9,
+          "title" : "Kava s mlijekom - velika",
+          "titleEng" : "Coffee with milk - large"
+        },
+        "p14" : {
+          "id" : "g1p14",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 10,
+          "title" : "Kava sa šlagom - velika",
+          "titleEng" : "Coffee with cream - large"
+        },
+        "p15" : {
+          "id" : "g1p15",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 11,
+          "title" : "Kava MIX",
+          "titleEng" : "Coffee with cream and milk - large"
+        },
+        "p16" : {
+          "id" : "g1p16",
+          "mjera" : "šalica",
+          "mjeraEng" : "cup",
+          "price" : 10,
+          "title" : "Cappuccino",
+          "titleEng" : "Cappuccino"
+        }
+      },
+      "id" : "g1",
+      "img" : "https://image.shutterstock.com/image-vector/cup-hot-coffee-on-white-260nw-341541554.jpg",
+      "title" : "Topli napitci",
+      "titleEng" : "Warm Drinks"
+    },
+    "g2" : {
+      "drinks" : {
+        "p10" : {
+          "id" : "g2p10",
+          "mjera" : "0,25l",
+          "price" : 13,
+          "title" : "Gazirana pića",
+          "titleEng" : "Carbonated drinks"
+        },
+        "p11" : {
+          "id" : "g2p11",
+          "mjera" : "0,25l",
+          "price" : 13,
+          "title" : "Ledeni čaj",
+          "titleEng" : "Ice tea"
+        },
+        "p12" : {
+          "id" : "g2p12",
+          "mjera" : "0,20l",
+          "price" : 15,
+          "title" : "Prirodni sokovi",
+          "titleEng" : "Natural juice"
+        },
+        "p13" : {
+          "id" : "g2p13",
+          "mjera" : "0,20l",
+          "price" : 10,
+          "title" : "Mineralna voda",
+          "titleEng" : "Mineral water"
+        },
+        "p14" : {
+          "id" : "g2p14",
+          "mjera" : "0,20l",
+          "price" : 20,
+          "title" : "Redbull",
+          "titleEng" : "Redbull"
+        }
+      },
+      "id" : "g2",
+      "img" : "data:image/png;base64,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",
+      "title" : "Bezalkoholna pića",
+      "titleEng" : "Soft Drinks"
+    },
+    "g3" : {
+      "drinks" : {
+        "p10" : {
+          "id" : "g3p10",
+          "mjera" : "0,20l",
+          "price" : 8,
+          "title" : "Karlovačko točeno",
+          "titleEng" : "Karlovačko draft"
+        },
+        "p11" : {
+          "id" : "g3p11",
+          "mjera" : "0,30l",
+          "price" : 10,
+          "title" : "Karlovačko točeno",
+          "titleEng" : "Karlovačko draft"
+        },
+        "p12" : {
+          "id" : "g3p12",
+          "mjera" : "0,50l",
+          "price" : 13,
+          "title" : "Karlovačko točeno",
+          "titleEng" : "Karlovačko draft"
+        },
+        "p13" : {
+          "id" : "g3p13",
+          "mjera" : "0,50l",
+          "price" : 13,
+          "title" : "Karlovačko",
+          "titleEng" : "Karlovačko bottle"
+        },
+        "p14" : {
+          "id" : "g3p14",
+          "mjera" : "0,33l",
+          "price" : 15,
+          "title" : "Amstel",
+          "titleEng" : "Amstel bottle"
+        },
+        "p15" : {
+          "id" : "g3p15",
+          "mjera" : "0,50l",
+          "price" : 16,
+          "title" : "Amstel",
+          "titleEng" : "Amstel bottle"
+        },
+        "p16" : {
+          "id" : "g3p16",
+          "mjera" : "0,30l",
+          "price" : 18,
+          "title" : "Heineken",
+          "titleEng" : "Heineken bottle"
+        },
+        "p17" : {
+          "id" : "g3p17",
+          "mjera" : "0,50l",
+          "price" : 13,
+          "title" : "Karlovačko Retro",
+          "titleEng" : "Karlovačko Retro bottle"
+        },
+        "p18" : {
+          "id" : "g3p18",
+          "mjera" : "0,50l",
+          "price" : 15,
+          "title" : "Karlovačko Radler",
+          "titleEng" : "Karlovačko Radler bottle"
+        },
+        "p19" : {
+          "id" : "g3p19",
+          "mjera" : "0,33l",
+          "price" : 15,
+          "title" : "Cider",
+          "titleEng" : "Cider"
+        },
+        "p20" : {
+          "id" : "g3p20",
+          "mjera" : "0,187l",
+          "price" : 20,
+          "title" : "Vino",
+          "titleEng" : "Wine"
+        },
+        "p21" : {
+          "id" : "g3p21",
+          "mjera" : "0,10l",
+          "price" : 12,
+          "title" : "Prošek",
+          "titleEng" : "Prosecco"
+        }
+      },
+      "id" : "g3",
+      "img" : "data:image/jpeg;base64,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",
+      "title" : "Pivo & vino",
+      "titleEng" : "Beer & wine"
+    },
+    "g4" : {
+      "drinks" : {
+        "p10" : {
+          "id" : "g4p10",
+          "mjera" : "0,03l",
+          "price" : 8,
+          "title" : "Amaro",
+          "titleEng" : "Amaro"
+        },
+        "p11" : {
+          "id" : "g4p11",
+          "mjera" : "0,03l",
+          "price" : 8,
+          "title" : "Stock",
+          "titleEng" : "Stock"
+        },
+        "p12" : {
+          "id" : "g4p12",
+          "mjera" : "0,03l",
+          "price" : 10,
+          "title" : "Jegermeister strani rum",
+          "titleEng" : "Jegermeister imported rum"
+        },
+        "p13" : {
+          "id" : "g4p13",
+          "mjera" : "0,03l",
+          "price" : 10,
+          "title" : "Ballantine's",
+          "titleEng" : "Ballantine's"
+        },
+        "p14" : {
+          "id" : "g4p14",
+          "mjera" : "0,03l",
+          "price" : 15,
+          "title" : "Johnny Walker",
+          "titleEng" : "Johnny Walker"
+        },
+        "p15" : {
+          "id" : "g4p15",
+          "mjera" : "0,03l",
+          "price" : 15,
+          "title" : "Jack Daniel's",
+          "titleEng" : "Jack Daniel's"
+        },
+        "p16" : {
+          "id" : "g4p16",
+          "mjera" : "0,03l",
+          "price" : 25,
+          "title" : "Chivas",
+          "titleEng" : "Chivas"
+        },
+        "p17" : {
+          "id" : "g4p17",
+          "mjera" : "0,03l",
+          "price" : 15,
+          "title" : "Campari",
+          "titleEng" : "Campari"
+        },
+        "p18" : {
+          "id" : "g4p18",
+          "mjera" : "0,03l",
+          "price" : 10,
+          "title" : "Tekila",
+          "titleEng" : "Tequilla"
+        },
+        "p19" : {
+          "id" : "g4p19",
+          "mjera" : "0,03l",
+          "price" : 8,
+          "title" : "Travarica",
+          "titleEng" : "Travarica"
+        }
+      },
+      "id" : "g4",
+      "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLPvFyhusnZ18IfoRZrf09kpnWz0MkbBGZvg&usqp=CAU",
+      "title" : "Alkoholna pića",
+      "titleEng" : "Alcoholic beverages"
+    }
+  }
+}

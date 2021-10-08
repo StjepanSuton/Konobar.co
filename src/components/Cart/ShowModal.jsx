@@ -25,7 +25,7 @@ export default function ShowModal() {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: matches === true ? 330 : 600,
+    width: "90%",
     bgcolor: "background.paper",
     boxShadow: 24,
     p: 4,

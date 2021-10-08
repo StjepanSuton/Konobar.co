@@ -34,8 +34,8 @@ export default function AllDrinksList() {
 
   if (isLoading) {
     return (
-      <Box sx={{ p: 50 }}>
-        <ClimbingBoxLoader loading={isLoading} size={50} />
+      <Box sx={{ p: 35 }}>
+        <ClimbingBoxLoader loading={isLoading} size={60} />
       </Box>
     );
   }

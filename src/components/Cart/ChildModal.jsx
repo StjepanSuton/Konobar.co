@@ -39,7 +39,7 @@ export default function ChildModal(props) {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 5000);
+      }, 6500);
     }
   }, [open]);
 
