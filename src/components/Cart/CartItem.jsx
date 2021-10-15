@@ -15,9 +15,8 @@ const useStyles = makeStyles({
 
 const CartItem = (props) => {
   const classes = useStyles();
-
   const dispatch = useDispatch();
-  const { title, quantity, price, id } = props.item;
+  const { title, quantity, price, id, mjera } = props.item;
 
   const removeItemHandler = () => {
     dispatch(cartActions.removeItemFromCart(id));
@@ -28,6 +27,7 @@ const CartItem = (props) => {
         id,
         title,
         price,
+        mjera,
       })
     );
   };
@@ -60,7 +60,9 @@ const CartItem = (props) => {
             alignItems: "flex-start",
           }}
         >
-          <Typography className={classes.text}>{`${title}`}</Typography>
+          <Typography
+            className={classes.text}
+          >{`${title}/${mjera}`}</Typography>
         </Box>
         <Typography>kn{price.toFixed(2)}</Typography>
       </Box>

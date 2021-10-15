@@ -20,43 +20,49 @@ export default function DrinksList(props) {
   const classes = useStyles();
 
   const dispatch = useDispatch();
-  const { title, price, id } = props;
-  console.log();
+  const { title, price, id, mjera } = props;
 
-  const addItemHandler = () => {
+  const addItemHandler = (e) => {
     dispatch(
       cartActions.addItemToCart({
         id,
         title,
         price,
+        mjera,
       })
     );
   };
 
   return (
     <List>
-      <motion.div whileTap={{ scale: 1.1 }}>
-        <div onClick={addItemHandler}>
-          <ListItem>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-                flexGrow: 1,
-              }}
-            >
-              <Typography
-                className={classes.text}
-              >{`${title} ${price}kn`}</Typography>
-            </Box>
+      <div>
+        <ListItem>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              flexGrow: 1,
+            }}
+          >
+            <Typography
+              className={classes.text}
+            >{`${title} / ${mjera}`}</Typography>
+          </Box>
+          <Typography className={classes.text}>{`${price}kn`}</Typography>
+          <motion.div
+            onClick={addItemHandler}
+            whileTap={{
+              scale: 2.2,
+            }}
+          >
             <IconButton>
               <AddCircleOutlinedIcon />
             </IconButton>
-          </ListItem>
-        </div>
-      </motion.div>
+          </motion.div>
+        </ListItem>
+      </div>
     </List>
   );
 }

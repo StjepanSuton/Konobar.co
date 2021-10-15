@@ -2,10 +2,8 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
+import Backdrop from "@mui/material/Backdrop";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { cartActions } from "../../store/cart-slice";
-import { uiActions } from "../../store/ui-slice";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 const style = {
@@ -24,15 +22,12 @@ const style = {
   alignItems: "center",
 };
 
-export default function ChildModal(props) {
+export default function SamoKonobar(props) {
   const [loading, setLoading] = useState(false);
   const open = props.openModal;
-  const dispatch = useDispatch();
 
   const handleCloseHandler = () => {
     props.openOrderWindowHandler();
-    dispatch(cartActions.removeAllItems());
-    dispatch(uiActions.toggle());
   };
   const loader = <ClimbingBoxLoader loading={loading} size={10} />;
 
@@ -48,7 +43,10 @@ export default function ChildModal(props) {
   return (
     <React.Fragment>
       <Modal
-        hideBackdrop
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
         open={open}
         onClose={handleCloseHandler}
         aria-labelledby="child-modal-title"
@@ -62,9 +60,8 @@ export default function ChildModal(props) {
         ) : (
           <Box sx={{ ...style, width: 240 }}>
             <h2 id="child-modal-title">
-              Konobar će uskoro biti tu s vašom narudžbom :)
+              Konobar će uskoro biti tu da vam ispuni želje
             </h2>
-
             <Button
               fullWidth
               variant="contained"

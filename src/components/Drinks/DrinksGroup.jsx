@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import DrinksList from "./DrinkList";
 import { styled } from "@mui/material/styles";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import { CardActionArea, Typography } from "@mui/material";
-import Box from "@mui/material/Box";
+import { Card, CardMedia, CardActionArea, Typography } from "@mui/material";
+import { Box, List } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import List from "@mui/material/List";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../store/ui-slice";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={9} square {...props} />
@@ -55,13 +54,24 @@ const useStyles = makeStyles({
 });
 
 export default function DrinksGroup(props) {
+  const dispatch = useDispatch();
   const classes = useStyles();
+  //Accordian expansion i scroll into view
   const [expanded, setExpanded] = useState();
   const [open, setIsOpen] = useState(true);
-  const handleChange = (panel) => (event, newExpanded) => {
+  const myRef = useRef(null);
+
+  const handleChange = (panel) => (e) => {
     setIsOpen(!open);
     setExpanded(open ? panel : false);
+    if (open === true) {
+      myRef.current.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+    }
   };
+  //
   const loadedDrinksList = [];
   for (const key in props.drinks) {
     loadedDrinksList.push({
@@ -87,12 +97,18 @@ export default function DrinksGroup(props) {
   ));
 
   return (
-    <div style={{ paddingTop: 20 }}>
+    <div
+      ref={myRef}
+      style={{ paddingTop: 10, zIndex: -10 }}
+      onClick={(e) => {
+        dispatch(uiActions.searchIsClicked(false));
+      }}
+    >
       <Card>
         <CardActionArea onClick={handleChange("panel1")}>
           <CardMedia
             component="img"
-            height="90"
+            height="100"
             image={props.img}
             alt="green iguana"
           />
@@ -111,7 +127,7 @@ export default function DrinksGroup(props) {
           </Box>
         </AccordionSummary>
         <AccordionDetails>
-          <div style={{ maxHeight: 300, overflow: "auto" }}>
+          <div>
             <List>{drinkList}</List>
           </div>
         </AccordionDetails>

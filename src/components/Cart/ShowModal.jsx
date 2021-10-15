@@ -84,6 +84,7 @@ export default function ShowModal() {
                       key={item.id}
                       item={{
                         id: item.id,
+                        mjera: item.mjera,
                         title: item.name,
                         quantity: item.quantity,
                         total: item.totalPrice,
