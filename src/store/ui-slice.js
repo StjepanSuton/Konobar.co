@@ -5,6 +5,7 @@ const uiSlice = createSlice({
     cartIsVisible: false,
     snackbarIsVisible: false,
     searchIsClicked: false,
+    userIsLoading: localStorage.getItem("userIsLoading"),
   },
   reducers: {
     toggle(state) {
@@ -17,9 +18,10 @@ const uiSlice = createSlice({
     searchIsClicked(state, action) {
       state.searchIsClicked = action.payload;
     },
-    searchIsNotClicked(state,action){
-      state.searchIsClicked = action.payload;
-    }
+    userIsLoadingHandler(state, action) {
+      state.userIsLoading = action.payload;
+      localStorage.setItem("userIsLoading", state.userIsLoading);
+    },
   },
 });
 

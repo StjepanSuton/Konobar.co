@@ -8,7 +8,6 @@ import IconButton from "@mui/material/IconButton";
 import { makeStyles } from "@mui/styles";
 import { motion } from "framer-motion";
 
-
 const useStyles = makeStyles({
   text: {
     fontWeight: "bold",
@@ -17,11 +16,10 @@ const useStyles = makeStyles({
 
 export default function FilteredDrinks(props) {
   const classes = useStyles();
-console.log()
-
+  console.log();
 
   const dispatch = useDispatch();
-  const { title, price, id, mjera } = props;
+  const { title, price, id, mjera, key } = props;
   const addItemHandler = (e) => {
     dispatch(
       cartActions.addItemToCart({
@@ -34,9 +32,7 @@ console.log()
   };
 
   return (
-    <div
-      style={{ width: "100%" }}
-    >
+    <div style={{ width: "100%" }}>
       <ListItem>
         <Box
           sx={{
