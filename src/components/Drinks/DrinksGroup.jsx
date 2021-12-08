@@ -99,7 +99,7 @@ export default function DrinksGroup(props) {
   return (
     <div
       ref={myRef}
-      style={{ paddingTop: 10, zIndex: -10 }}
+      style={{ paddingTop: 0, zIndex: -10 }}
       onClick={(e) => {
         dispatch(uiActions.searchIsClicked(false));
       }}
@@ -122,7 +122,7 @@ export default function DrinksGroup(props) {
           <Box sx={{ display: "flex" }}>
             <Typography
               className={classes.text}
-            >{`${props.title}/`}</Typography>{" "}
+            >{`${props.title}/`}</Typography>
             <Typography>{props.titleEng}</Typography>
           </Box>
         </AccordionSummary>

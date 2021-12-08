@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import DrinksGroup from "./DrinksGroup";
 import { Box } from "@mui/material/";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import KonobarkoLoading from "../KonobarkoLoading";
 import { useSelector } from "react-redux";
 import SearchTab from "../UI/SearchTab";
 
@@ -71,8 +71,8 @@ export default function AllDrinksList() {
 
   if (isLoading) {
     return (
-      <Box sx={{ p: 35 }}>
-        <ClimbingBoxLoader loading={isLoading} size={60} />
+      <Box sx={{ p: 5 }}>
+        <KonobarkoLoading />
       </Box>
     );
   }
@@ -97,9 +97,25 @@ export default function AllDrinksList() {
   ));
 
   return (
-    <div style={{ width: "100%" }}>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <SearchTab drinks={drinks} />
-      <Box sx={{ width: "100%", maxWidth: 750 }}>{drinkGroup}</Box>;
+      <Box
+        sx={{
+          flexGrow: 1,
+          width: "100%",
+          maxWidth: 1050,
+          alignItems: "center",
+        }}
+      >
+        {drinkGroup}
+      </Box>
     </div>
   );
 }

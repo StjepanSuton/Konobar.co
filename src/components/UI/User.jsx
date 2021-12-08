@@ -49,6 +49,9 @@ export default function User() {
   };
 
   useEffect(() => {
+    if (userIsLoading === "true") {
+      setTimeout(() => dispatch(uiActions.userIsLoadingHandler("false")), 4000);
+    }
     getRedirectResult(auth).then((result) => {
       if (result === null) {
         return;
@@ -63,7 +66,7 @@ export default function User() {
         dispatch(uiActions.userIsLoadingHandler("false"));
       }
     });
-  }, []);
+  }, [userIsLoading]);
   //
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const photoURL = useSelector((state) => state.user.userPhoto);
